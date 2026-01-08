@@ -224,7 +224,10 @@ void lsp_autocomplete_item_selected(LspServer *server, GeanyDocument *doc, guint
 				text_edit.range.start = lsp_utils_scintilla_pos_to_lsp(sci, pos - rootlen);
 				text_edit.range.end = lsp_utils_scintilla_pos_to_lsp(sci, pos);
 
-				lsp_utils_apply_text_edit(sci, &text_edit, sym->is_snippet);
+				if (i == 0 && server->config.autocomplete_apply_additional_edits && sym->additional_edits)
+					lsp_utils_apply_text_edits(sci, &text_edit, sym->additional_edits, sym->is_snippet);
+				else
+					lsp_utils_apply_text_edit(sci, &text_edit, sym->is_snippet);
 			}
 		}
 
