@@ -263,6 +263,9 @@ a single language server per file type.
 All of these limitations are addressed by the LSP proxy project available at
 https://github.com/techee/lsp-proxy and related issues should be directed there.
 
+Similar functionality is also provided by https://github.com/joaotavora/rassumfrassum
+which can be used with the plugin as well.
+
 License
 =======
 

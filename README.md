@@ -45,6 +45,9 @@ a single language server per programming language.
 All of these limitations are addressed by the [LSP proxy](https://github.com/techee/lsp-proxy)
 project and related issues should be directed there.
 
+Similar functionality is also provided by [rassumfrassum](https://github.com/joaotavora/rassumfrassum)
+which can be used with the plugin as well.
+
 Building
 --------
 
